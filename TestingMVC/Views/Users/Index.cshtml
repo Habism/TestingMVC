@@ -1,0 +1,29 @@
+﻿@model IEnumerable<TestingMVC.Models.User>
+@{
+    ViewBag.Title = "User Registration";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+<p>
+    @Html.ActionLink("New User", "New", "Users", null, new { @class = "btn btn-primary" })
+</p>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>User</th>
+            <th>Profession</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td style="width:50%">@Html.ActionLink(user.Name, "Details", "Users", new { id = user.Id }, null)</td>
+                <td style="width:50%">@user.Profession</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

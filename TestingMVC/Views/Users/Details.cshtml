@@ -1,0 +1,15 @@
+﻿@model TestingMVC.Models.User
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Name</h2>
+
+<ul>
+    <li>Sex: @Model.Gender.Name</li>
+    <li>Age: @Model.Age</li>
+    <li>Proffesion: @Model.Profession</li>
+</ul>
+
+
