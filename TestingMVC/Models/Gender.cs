@@ -8,6 +8,7 @@ namespace TestingMVC.Models
 {
     public class Gender
     {
+        [Key]
         public byte Id { get; set; }
 
         [Required]
